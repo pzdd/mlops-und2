@@ -26,4 +26,4 @@ app.include_router(intent_clf_router)
 
 @app.get('/')
 def root():
-    return {'status': 'ok', 'version': os.getenv('APP_VERSION', 'dev')}
+    return {'status': 'ok', 'version':  os.environ.get('APP_VERSION', 'dev')}
